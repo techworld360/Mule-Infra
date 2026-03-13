@@ -1,68 +1,59 @@
-# Mulesoft Infrastructure Setup Guides
+# Mule-Infra
 
-Welcome to the **Mulesoft Infrastructure Setup** repository! This project serves as a comprehensive collection of "How-To" guides and configuration templates for setting up, managing, and optimizing Mulesoft environments (specifically Runtime Fabric and Anypoint Platform) on modern infrastructure.
+Welcome to the **Mule-Infra** repository! This is a central hub for sharing detailed "How-To" guides, Kubernetes manifests, and configuration templates for **MuleSoft Infrastructure** setups.
+
+The goal of this project is to provide the community with tested, production-ready patterns for managing Runtime Fabric (RTF) and Anypoint Platform components.
 
 ---
 
-## 📂 What's Inside?
+## 📂 Repository Contents
 
-This repository contains step-by-step documentation and Kubernetes manifests for various infrastructure scenarios, including:
+This repository contains step-by-step documentation and configuration files for:
 
-* **Runtime Fabric (RTF) on Kubernetes:** Best practices for EKS, AKS, and GKE.
-* **Istio Integration:** Leveraging Istio Service Mesh and K8s Gateway API for advanced ingress management.
-* **Security & TLS:** Managing certificates, secrets, and mutual TLS (mTLS) configurations.
-* **Automation:** CI/CD snippets and RBAC configurations for automated environment provisioning.
+* **RTF on Kubernetes:** Deploying Runtime Fabric on EKS, AKS, and GKE.
+* **Service Mesh & Ingress:** Integrating **Istio** with the **K8s Gateway API**.
+* **Security:** Managing TLS certificates and Kubernetes Secrets for Mule applications.
+* **RBAC & Permissions:** Fine-grained access control for RTF agents and namespaces.
 
 ---
 
 ## 🚀 Getting Started
 
-To get started with a specific setup, navigate to the corresponding directory. For example, to set up Istio with the Gateway API for RTF:
+To implement any of the guides found in this repo:
 
-1. Clone this repository:
+1. **Clone the Repository:**
 ```bash
-git clone https://github.com/your-username/mulesoft-infra-guides.git
+git clone https://github.com/techworld360/Mule-Infra.git
 
 ```
 
 
-2. Navigate to the directory:
-```bash
-cd istio-gateway-api-rtf
-
-```
-
-
-3. Follow the instructions in the local `README.md` or the provided YAML templates.
+2. **Navigate to the Guide:**
+Browse the directories to find the specific infrastructure component you wish to configure.
+3. **Apply Configurations:**
+Each directory contains a `README.md` with specific `kubectl` or `istioctl` commands.
 
 ---
 
+## 🛠 Prerequisites
 
-## 🤝 Support & Community
+Before using these templates, ensure you have:
 
-For any clarifications or questions, please reach out via the channels below.
-
-> **Note:** We are happy to help, but please expect a delay in response as this is a community-driven effort.
-
-* **Discord:** Join our [Discord Server](https://discord.gg/9Z8KfyqX) and create a post in the relevant channel.
-* **Email:** Contact us at [techworld360@hotmail.com](mailto:techworld360@hotmail.com).
+* A running Kubernetes cluster (v1.24+ recommended for Gateway API).
+* [kubectl](https://kubernetes.io/docs/tasks/tools/) installed and configured.
+* [Anypoint Platform](https://anypoint.mulesoft.com/) credentials with permissions to manage Runtime Fabric.
 
 ---
 
-## 📝 Contributions
+## 🤝 Community & Support
 
-Found a bug or have a better way to configure a component? Contributions are welcome!
+For any clarifications or if you run into issues while following the guides, please reach out.
 
-1. Fork the Project.
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`).
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`).
-4. Push to the Branch (`git push origin feature/AmazingFeature`).
-5. Open a Pull Request.
+> **Note:** Please expect a slight delay in response as we support the community in our spare time.
 
----
-
-**Disclaimer:** *These guides are intended for educational purposes. Always validate configurations in a lower environment before applying them to production.*
+* **Discord:** Join the conversation on our [Discord Server](https://discord.gg/9Z8KfyqX).
+* **Email:** Reach us directly at [techworld360@hotmail.com](mailto:techworld360@hotmail.com).
 
 ---
 
-Would you like me to add a specific "Table of Contents" section based on the directories you currently have in your local environment?
+**Disclaimer:** *The configurations provided here are templates. Please review and test all YAML files in a sandbox environment before applying them to a production cluster.*
