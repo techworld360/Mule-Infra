@@ -270,7 +270,3 @@ Ensure that the `VirtualService` was successfully created by the RTF agent and p
 kubectl get vs -n rtf-appnamespace
 
 ```
-
----
-
-Would you like me to help you troubleshoot any specific errors you're seeing in the RTF agent logs?
